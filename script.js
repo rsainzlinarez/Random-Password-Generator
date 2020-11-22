@@ -1,9 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var upperChars = ['A', 'B',	'C',	'D',	'E',	'F',	'G',	'H',	'I',	'J',	'K',	'L',	'M',	'N',	'O',	'P',	'Q',	'R',	'S',	'T',	'U',	'V',	'W',	'X',	'Y',	'Z', ];
-var lowerChars = ['a', 'b', 'c','d','e','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','y','z'];
-var numbers =['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',];
-var specialChars = ['!', '#',  '%', '^', '&', '*', '(', ')', '~',];
+var upperChars = 'ABCDEFGHIjKLMONPQRSTUVWXYZ'
+var lowerChars = 'abcdefghijklmonpqrstuvwxyz';
+var numbers = '0123456789';
+var specialChars = '!#%^&*()~';
 
 
 // Write password to the #password input
@@ -14,6 +14,31 @@ function writePassword() {
   passwordText.value = password;
 
 }
+function generatePassword(){
+  var passwordLength = parseInt(prompt('Choose a password that is between 8 and 128 characters long'));
+  var password = '';
+  var charPool = '';
 
+  var includeUppderCase= confirm('Inlcude Upper Case Characters?');
+  if(includeUppderCase){
+    charPool = charPool + upperChars;
+
+  }
+
+  
+
+  
+
+  
+  
+
+  for (let i=0; i < passwordLength; i++){
+  var randomNum = Math.floor(Math.random() * charPool.length);      
+  password = password + charPool[randomNum];
+  }
+  return password;
+  
+  }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
