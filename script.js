@@ -17,24 +17,35 @@ function writePassword() {
 function generatePassword(){
   var passwordLength = parseInt(prompt('Choose a password that is between 8 and 128 characters long'));
   var password = '';
-  var charPool = '';
+  var charDepository = '';
 
   var includeUppderCase= confirm('Inlcude Upper Case Characters?');
   if(includeUppderCase){
-    charPool = charPool + upperChars;
+    charDepository = charDepository + upperChars;
 
   }
 
-  
+  var includeLowerCase = confirm('Include lower case characters');
+   if(includeLowerCase){
+      charDepository
 
-  
+   }
 
-  
+   var randomNumbers = confirm("Include numbers?");
+   if(randomNumbers){
+    charDepository = charDepository + numbers;
+   }
+
+  var includeSpecialChars = confirm('Include Special Characters?');
+  if(includeSpecialChars){
+    charDepository = charDepository + specialChars;
+
+  }   
   
 
   for (let i=0; i < passwordLength; i++){
-  var randomNum = Math.floor(Math.random() * charPool.length);      
-  password = password + charPool[randomNum];
+  var randomNum = Math.floor(Math.random() * charDepository.length);      
+  password = password + charDepository[randomNum];
   }
   return password;
   
