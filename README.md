@@ -38,4 +38,4 @@ In order to accomplish thi task JavaScript was used to:
 
 
 
-Link to Website: 
+Link to Website: https://rsainzlinarez.github.io/Random-Password-Generator/
