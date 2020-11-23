@@ -8,27 +8,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <section class="wrapper">
+      <!-- Password generator title -->
       <header>
         <h1>Password Generator</h1>
       </header>
-      <div class="card">
-        <div class="card-header">
+
+      <!-- Main container -->
+      <main class="card">
+
+        <!-- Hold the section secondary title -->
+        <header class="card-header">
           <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
+        </header>
+
+        <!-- Section where password will be displayed -->
+        <section class="card-body">
           <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
-        </div>
-        <div class="card-footer">
+        </section>
+
+        <!-- Button to generate password -->
+        <section class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
-    </div>
+        </section>
+
+      </main>
+
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>
