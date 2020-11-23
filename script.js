@@ -21,10 +21,10 @@ function generatePassword(){
   
   
   //Verifies minimun character length minimun
-  while( passwordLength <= 7){
+  while( passwordLength <= 7 || passwordLength >= 129){
     passwordLength = parseInt(prompt('Choose a password that is between 8 and 128 characters long'));
    //If minimun length is met, it breaks the while loop
-     if(passwordLength > 8){
+     if(passwordLength > 8 && passwordLength < 129){
       break;
      }
   }
